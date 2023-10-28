@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:ns1="http://schemas.android.com/apk/res-auto">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyAppUnitTest" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.MyAppUnitTest" parent="Base.Theme.MyAppUnitTest" />
+
+    <style name="DefaultNumberPickerTheme1" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="android:textColorPrimary">#163BDE</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:stateListAnimator" ns1:ignore="NewApi">
+            @animator/mtrl_btn_unelevated_state_list_anim
+        </item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Theme.MyApplication.Fullscreen" parent="Base.Theme.MyAppUnitTest">
+        <item name="android:actionBarStyle">@style/Widget.Theme.MyApplication.ActionBar.Fullscreen
+        </item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+
+
+
+    <style name="Theme.MyApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MyApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

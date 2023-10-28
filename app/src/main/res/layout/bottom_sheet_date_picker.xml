@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_4318">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pickedDate">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/date_picker_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <NumberPicker
+            android:descendantFocusability="blocksDescendants"
+            android:id="@+id/dayPicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:theme="@style/DefaultNumberPickerTheme1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/monthPicker"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <NumberPicker
+            android:descendantFocusability="blocksDescendants"
+            android:id="@+id/monthPicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:theme="@style/DefaultNumberPickerTheme1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/yearPicker"
+            app:layout_constraintStart_toEndOf="@id/dayPicker" />
+
+        <NumberPicker
+            android:descendantFocusability="blocksDescendants"
+            android:id="@+id/yearPicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:theme="@style/DefaultNumberPickerTheme1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/monthPicker" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/pickedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:includeFontPadding="false"
+        android:text="@string/date_text"
+        android:textColor="#202020"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/centerGap"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_1sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancel_btn"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_14sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:backgroundTint="#DFE5FF"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_medium"
+        android:includeFontPadding="false"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0"
+        android:maxLines="1"
+        android:minHeight="@dimen/_25sdp"
+        android:padding="@dimen/_4sdp"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/blue_holo_dark"
+        android:textSize="@dimen/_14sdp"
+        app:cornerRadius="@dimen/_6sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/centerGap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/datePicker" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/setBtn"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:backgroundTint="@color/blue_holo_dark"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_medium"
+        android:includeFontPadding="false"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0"
+        android:maxLines="1"
+        android:minHeight="@dimen/_25sdp"
+        android:padding="@dimen/_4sdp"
+        android:text="@string/set"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_14sdp"
+        app:cornerRadius="@dimen/_6sdp"
+        app:layout_constraintBottom_toBottomOf="@id/cancel_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/centerGap"
+        app:layout_constraintTop_toTopOf="@id/cancel_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
